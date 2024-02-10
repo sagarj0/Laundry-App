@@ -1,28 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
-dotenv.config({
-  path: "./config.env",
-});
-
-async function connectToDatabase() {
-  try {
-    const DB = process.env.DB_STRING.replace(
-      "<password>",
-      process.env.DB_PASSWORD
-    );
-    console.log(DB);
-
-    await mongoose.connect(DB, {
-      useNewUrlParser: true,
-    });
-
-    console.log("DB connection successful");
-  } catch (err) {
-    console.error(err);
-  }
-}
+const connectToDatabase = require("./mongoDB/config");
 
 connectToDatabase();
 
