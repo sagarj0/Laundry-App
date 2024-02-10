@@ -1,0 +1,22 @@
+{
+  "name": "laundry-app",
+  "version": "1.0.0",
+  "description": "For Managing the Laundry stores, Using MERN stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagarj0/Laundry-App.git"
+  },
+  "author": "Sagar Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagarj0/Laundry-App/issues"
+  },
+  "homepage": "https://github.com/sagarj0/Laundry-App#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
