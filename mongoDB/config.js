@@ -1,18 +1,14 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const path = require("path");
 
 dotenv.config({
-  path: path.resolve(__dirname, "config.env"),
+  path: "./config.env",
 });
+
+const DB = process.env.DB_STRING.replace("<password>", process.env.DB_PASSWORD);
 
 const connectToDatabase = async () => {
   try {
-    const DB = process.env.DB_STRING.replace(
-      "<password>",
-      process.env.DB_PASSWORD
-    );
-
     await mongoose.connect(DB, {
       useNewUrlParser: true,
     });
