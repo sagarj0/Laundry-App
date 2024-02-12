@@ -7,6 +7,7 @@ const customerSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
+    required: true,
   },
   email: {
     type: String,
@@ -15,31 +16,31 @@ const customerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  order: {
-    items: [
-      {
-        item_name: {
-          type: String,
-          required: true,
-        },
-        quantity: {
-          type: Number,
-          required: true,
-        },
-      },
-    ],
-    cost: {
-      type: Number,
-      required: true,
-    },
-    order_date: {
-      type: Date,
-      default: Date.now,
-    },
-    completion_date: {
-      type: Date,
-    },
-  },
+  // order: {
+  //   items: [
+  //     {
+  //       item_name: {
+  //         type: String,
+  //         required: true,
+  //       },
+  //       quantity: {
+  //         type: Number,
+  //         required: true,
+  //       },
+  //     },
+  //   ],
+  //   cost: {
+  //     type: Number,
+  //     required: true,
+  //   },
+  //   order_date: {
+  //     type: Date,
+  //     default: Date.now,
+  //   },
+  //   completion_date: {
+  //     type: Date,
+  //   },
+  // },
 });
 
 const Customer = mongoose.model('Customer', customerSchema);
